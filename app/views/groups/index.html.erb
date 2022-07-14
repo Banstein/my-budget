@@ -5,8 +5,11 @@
   <div class="card-list">
     <% @groups.each do |category| %>
       <div>
-        <div><%= category.name%></div>
+        <h2><%= link_to category.name, group_payments_path(group_id: category.id, class: 'text') %></h2>
         <div><%= category.icon%></div>
+        <p><%= category.created_at.strftime('%d %B %Y') %></p>
+        <br>
+        <br>
         <hr>
       </div>
     <% end %>
