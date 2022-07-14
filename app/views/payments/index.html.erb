@@ -1,1 +1,21 @@
 <h1>Payments</h1>
+<main>
+  <div>
+    <% if @payments.blank? %>
+        <p>No Transaction Yet!</p>
+    <% else %>
+        <ul class="card-list">
+          <% @payments.each do |payment| %>
+              <li class="transaction-card hover">
+                <a><h2><%= payment.name %></h2></a>
+                <a>$<%= payment.amount %></a>
+                <%= button_to "Delete", group_payment_path(user_id: payment.user.id, group_id: payment.group.id, id: payment.id), method: :delete, class: "del-btn" %>
+              </li>
+          <% end %>
+        </ul>
+    <% end %>
+  </div>
+  <button class="green-btn" type="button">
+    <%= link_to "Add Transaction", new_group_payment_path %>
+  </button>
+</main>
