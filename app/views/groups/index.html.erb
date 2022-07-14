@@ -1,7 +1,5 @@
-  <%= render "layouts/navbar" %>
-<h1>Groups</h1>
+  <%= render 'layouts/navbar', title: 'Categories', back_url: nil, logout: true %>
 <br/>
-
 <main>
   <div class="card-list">
     <% @groups.each do |category| %>

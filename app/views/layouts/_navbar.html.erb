@@ -1,4 +1,11 @@
 <% if user_signed_in? %>
+  <nav>
+  <h1><%= title %></h1>
   <li class="navs"><a href=<%= groups_path %>>Home</a></li>
-  <%= link_to 'Sign Out', destroy_user_session_path, data: {turbo_method: :delete} %>
+  <% if logout %>
+    <%= button_to destroy_user_session_path, method: :delete do %>
+      <i class="fa fa-sign-out fa-2x"></i>
+    <% end %>
+  <% end %>
+  </nav>
 <% end %>
