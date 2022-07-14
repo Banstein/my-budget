@@ -1,5 +1,17 @@
 <h1>Groups</h1>
 <br/>
-<button class="add-btn" type="button">
-  <%= link_to 'Add a new category', new_group_path %>
-</button>
+
+<main>
+  <div class="card-list">
+    <% @groups.each do |category| %>
+      <div>
+        <div><%= category.name%></div>
+        <div><%= category.icon%></div>
+        <hr>
+      </div>
+    <% end %>
+  </div>
+  <button class="add-btn" type="button">
+    <%= link_to 'Add a new category', new_group_path %>
+  </button>
+</main>
