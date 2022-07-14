@@ -1,1 +1,8 @@
 <h1>New group</h1>
+<div class="card-list">
+  <%= form_with model: @group, url: groups_path do |f| %>
+    <%= f.text_field :icon, placeholder: "Enter the Icon link", class: "form-field" %>
+    <%= f.text_field :name, placeholder: "Name", class: "form-field"%>
+    <%= f.submit 'Save' ,class: 'green-btn'%>
+  <% end %>
+</div>
