@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index]
 
-  resources :groups, only: [:index, :show, :new, :create] do
-    resources :payments, only: [:index, :show, :new, :create]
+  resources :groups, only: [:index, :new, :create, :destroy ] do
+    resources :payments, only: %i[index new create destroy update]
   end
 end

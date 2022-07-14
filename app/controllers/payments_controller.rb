@@ -21,7 +21,7 @@ class PaymentsController < ApplicationController
 
   # DELETE /items/1
   def destroy
-    @payments = Payment.find(params[:id])
+    @payment = Payment.find(params[:id])
 
     if @payment.destroy
       redirect_to group_payments_path, notice: 'Transaction removed successfully'
@@ -33,8 +33,8 @@ class PaymentsController < ApplicationController
   private
 
   # Use callbacks to share common setup or constraints between actions.
-  def set_item
-    @payment = Item.find(params[:id])
+  def set_payment
+    @payment = Payment.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
