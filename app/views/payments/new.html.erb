@@ -1,1 +1,15 @@
 <h1>New payment</h1>
+<div class="center">
+  <h1>ADD A NEW TRANSACTION</h1>
+  <%= form_with model: @group_payment, url: group_payments_path do |f| %>
+      <br/>
+      <br/>
+      <%= f.text_field :name, placeholder: 'Name', class: "form-field"%>
+      <br/>
+      <br/>
+      <%= f.number_field :amount, placeholder: 'Amount', class: "form-field"%>
+      <br/>
+      <br/>
+      <%= f.submit 'Add Transaction', class:'green-btn'%>
+  <% end %>
+</div>
