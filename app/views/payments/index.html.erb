@@ -1,22 +1,26 @@
 <%= render 'layouts/navbar', title: 'Transactions', back_url: groups_path, logout: true %>
 
 <main>
-  <div>
+  <div class="trans-container">
+  <div class="banner">
+    <img src="<%= @group.icon%>" alt="missed">
+    <div class="amount">
+      <h1><%= @group.name %></h1>
+      <h5>Total amount spent</h5>
+      <h3><%= @total_amount %></h3>
+    </div>
+  </div>
     <% if @payments.blank? %>
-        <p>No Transaction Yet!</p>
+      <p>No Transaction Yet!</p>
     <% else %>
-        <ul class="card-list">
-          <% @payments.each do |payment| %>
-              <li class="trans-card">
-                <a><h2><%= payment.name %></h2></a>
-                <a>$<%= payment.amount %></a>
-                <%= button_to "Delete", group_payment_path(user_id: payment.user.id, group_id: payment.group.id, id: payment.id), method: :delete, class: "btn-del" %>
-              </li>
-          <% end %>
-        </ul>
+    <% @payments.each do |payment| %>
+      <li class="trans-card">
+        <a><h2><%= payment.name %></h2></a>
+        <a>$<%= payment.amount %></a>
+        <%= button_to "Delete", group_payment_path(user_id: payment.user.id, group_id: payment.group.id, id: payment.id), method: :delete, class: "btn-del" %>
+      </li>
+    <% end %>
     <% end %>
   </div>
-  <button class="green-btn" type="button">
-    <%= link_to "Add Transaction", new_group_payment_path %>
-  </button>
+    <%= render 'layouts/footer', title: 'Add Transaction', path: new_group_payment_path %>
 </main>

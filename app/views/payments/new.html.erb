@@ -1,15 +1,14 @@
-<h1>New payment</h1>
-<div class="center">
-  <h1>ADD A NEW TRANSACTION</h1>
-  <%= form_with model: @group_payment, url: group_payments_path do |f| %>
-      <br/>
-      <br/>
-      <%= f.text_field :name, placeholder: 'Name', class: "form-field"%>
-      <br/>
-      <br/>
-      <%= f.number_field :amount, placeholder: 'Amount', class: "form-field"%>
-      <br/>
-      <br/>
-      <%= f.submit 'Add Transaction', class:'green-btn'%>
+<%= render 'layouts/navbar', title: 'New Transaction', back_url: group_payments_path, logout: true %>
+<div class="add-form">
+  <%= form_with model: @group, url: group_payments_path do |f| %>
+  <div class="input-wrapper">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: 'Enter name of transaction', class: "form-field"%>
+  </div>
+  <div class="input-wrapper">
+    <%= f.label :amount %>
+    <%= f.number_field :amount, required: true, placeholder: 'Transaction Amount ', class: "form-field"%>
+  </div>
+  <div><%= f.submit 'Add Transaction' ,class: 'add-submit btn-primary'%></div>
   <% end %>
 </div>

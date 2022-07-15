@@ -1,8 +1,14 @@
-<h1>New group</h1>
-<div class="card-list">
+<%= render 'layouts/navbar', title: 'New Category', back_url: groups_path, logout: true %>
+<div class="add-form">
   <%= form_with model: @group, url: groups_path do |f| %>
-    <%= f.text_field :icon, placeholder: "Enter the Icon link", class: "form-field" %>
-    <%= f.text_field :name, placeholder: "Name", class: "form-field"%>
-    <%= f.submit 'Save' ,class: 'green-btn'%>
+  <div class="input-wrapper">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "Enter name of category", class: "form-field"%>
+  </div>
+  <div class="input-wrapper">
+    <%= f.label :icon %>
+    <%= f.text_field :icon, required: true, placeholder: "Enter the URL", class: "form-field" %>
+  </div>
+  <div><%= f.submit 'Add Category' ,class: 'add-submit btn-primary'%></div>
   <% end %>
 </div>

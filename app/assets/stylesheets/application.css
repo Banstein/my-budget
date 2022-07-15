@@ -25,6 +25,15 @@ i {
   color: white;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+/* a:visited {
+  color: currentColor;
+} */
+
 /* navbar */
 
 nav {
@@ -35,6 +44,7 @@ nav {
   font-size: 1.4rem;
   background-color: var(--main);
   padding: 20px;
+  height: 70px;
 }
 
 /* end */
@@ -138,17 +148,86 @@ nav {
 
 /* end */
 
-/* categories */
+/* form */
 
-.trans-card,
-.cat-list {
-  /* background-color: white; */
-  margin: 20px;
-  padding: 10px;
-  border: 2px solid black;
+.btn-add {
+  min-width: 300px;
+  cursor: pointer;
+  padding: 10px 30px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  background: transparent;
+  color: white !important;
+  border: 1px solid white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
-.cat-list img {
+.add-form * {
+  font-size: 20px;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  min-width: 300px;
+}
+
+.input-wrapper input {
+  margin: 3px 0;
+  padding: 5px 10px;
+  border: grey solid 1px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.add-submit {
+  cursor: pointer;
+  margin: 20px 0;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/* end */
+
+/* categories */
+
+.trans-container,
+.cat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.trans-card,
+.cat-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  width: 80%;
+}
+
+.cat-card img {
   width: 100px;
 }
 
@@ -164,6 +243,7 @@ nav {
 
 .trans-card button {
   background: red;
+  cursor: pointer;
 }
 
 .btn-del {
@@ -174,5 +254,50 @@ nav {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  color: white;
+  color: black;
+}
+
+.banner * {
+  color: var(--text);
+}
+
+.banner {
+  margin-bottom: 40px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+}
+
+.banner img {
+  width: 150px;
+  margin-right: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.amount {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.amount h1 {
+  margin-bottom: 20px;
+}
+
+/* end */
+
+/* footer */
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--second);
 }

@@ -5,7 +5,7 @@ class PaymentsController < ApplicationController
   def index
     @group = Group.find(params[:group_id])
     @payments = Payment.where(group_id: @group.id).order(id: :desc)
-    # @total_amount = @payments.sum(:amount)
+    @total_amount = @payments.sum(:amount)
   end
 
   # POST /items

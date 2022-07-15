@@ -3,14 +3,12 @@
 <main>
   <div class="cat-container">
     <% @groups.each do |category| %>
-      <div class="cat-list">
+      <div class="cat-card">
         <h2><%= link_to category.name, group_payments_path(group_id: category.id, class: 'text') %></h2>
         <img src="<%= category.icon%>" alt="null">
         <p><%= category.created_at.strftime('%d %B %Y') %></p>
       </div>
     <% end %>
   </div>
-  <button class="add-btn" type="button">
-    <%= link_to 'Add a new category', new_group_path %>
-  </button>
+    <%= render 'layouts/footer', title: 'Add a new category', path: new_group_path %>
 </main>
