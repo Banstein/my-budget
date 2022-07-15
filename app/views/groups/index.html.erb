@@ -1,15 +1,12 @@
   <%= render 'layouts/navbar', title: 'Categories', back_url: nil, logout: true %>
 <br/>
 <main>
-  <div class="card-list">
+  <div class="cat-container">
     <% @groups.each do |category| %>
-      <div>
+      <div class="cat-list">
         <h2><%= link_to category.name, group_payments_path(group_id: category.id, class: 'text') %></h2>
         <img src="<%= category.icon%>" alt="null">
         <p><%= category.created_at.strftime('%d %B %Y') %></p>
-        <br>
-        <br>
-        <hr>
       </div>
     <% end %>
   </div>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +14,30 @@
   --second: #5fb523;
   --text: #434b54;
 }
+
+button {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+i {
+  color: white;
+}
+
+/* navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #eee;
+  font-size: 1.4rem;
+  background-color: var(--main);
+  padding: 20px;
+}
+
+/* end */
 
 /* welcome */
 
@@ -34,6 +59,7 @@
 .welcome h1 {
   margin: 300px 0;
   font-family: 'Satisfy', cursive !important;
+  text-align: center;
 }
 
 .btn {
@@ -61,20 +87,7 @@
 
 /* end */
 
-/* navbar */
-
-nav {
-  display: flex;
-  justify-content: center;
-  color: #eee;
-  font-size: 1.4rem;
-  background-color: var(--main);
-  padding: 20px 0;
-  margin-bottom: 20px;
-}
-
-/* end */
-
+/* .sign-form */
 
 .sign-form * {
   font-size: 20px;
@@ -121,4 +134,49 @@ nav {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   padding: 5px 10px;
+}
+
+/* end */
+
+/* categories */
+
+.cat-container {
+  /* background-color: #eee; */
+}
+
+.trans-card,
+.cat-list {
+  /* background-color: white; */
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.cat-list img {
+  width: 100px;
+}
+
+/* end */
+
+/* payments */
+
+.trans-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trans-card button {
+  background: red;
+}
+
+.btn-del {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: white;
 }

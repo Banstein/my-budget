@@ -10,8 +10,12 @@
   <h1><%= title %></h1>
   <% if logout %>
     <%= button_to destroy_user_session_path, method: :delete do %>
-      <i class="fa fa-sign-out fa-2x"></i>
-    <% end %>
+      <i class="fa fa-sign-out fa-3x"></i>
+  <% end %>
+  <% else %>
+    <div style="width: 35px"></div>
   <% end %>
   </nav>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 </header>

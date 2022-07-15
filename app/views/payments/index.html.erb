@@ -1,4 +1,5 @@
-<h1>Payments</h1>
+<%= render 'layouts/navbar', title: 'Transactions', back_url: groups_path, logout: true %>
+
 <main>
   <div>
     <% if @payments.blank? %>
@@ -6,10 +7,10 @@
     <% else %>
         <ul class="card-list">
           <% @payments.each do |payment| %>
-              <li class="transaction-card hover">
+              <li class="trans-card">
                 <a><h2><%= payment.name %></h2></a>
                 <a>$<%= payment.amount %></a>
-                <%= button_to "Delete", group_payment_path(user_id: payment.user.id, group_id: payment.group.id, id: payment.id), method: :delete, class: "del-btn" %>
+                <%= button_to "Delete", group_payment_path(user_id: payment.user.id, group_id: payment.group.id, id: payment.id), method: :delete, class: "btn-del" %>
               </li>
           <% end %>
         </ul>
