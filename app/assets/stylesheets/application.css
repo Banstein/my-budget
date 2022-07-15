@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 * {
-  /* margin: 0;
-  padding: 0; */
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
@@ -11,4 +12,106 @@
   --main: #3778c2;
   --second: #5fb523;
   --text: #434b54;
+}
+
+/* welcome */
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.welcome h1 {
+  margin: 300px 0;
+  font-family: 'Satisfy', cursive !important;
+}
+
+.btn {
+  padding: 15px 50px;
+  margin: 10px auto;
+  min-width: 300px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--main);
+  color: white;
+}
+
+.btn-light {
+  background: transparent;
+  color: var(--text);
+}
+
+/* end */
+
+/* navbar */
+
+nav {
+  display: flex;
+  justify-content: center;
+  color: #eee;
+  font-size: 1.4rem;
+  background-color: var(--main);
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+/* end */
+
+
+.sign-in-form * {
+  font-size: 20px;
+}
+
+.sign-in-form {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.sign-in-form input {
+  outline: none;
+  border: 1px gray solid !important;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.actions * {
+  background: var(--main);
+  color: white;
+  cursor: pointer;
+}
+
+.sign-in-links * {
+  color: black;
 }

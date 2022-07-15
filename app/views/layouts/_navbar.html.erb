@@ -1,11 +1,17 @@
-<% if user_signed_in? %>
+<header>
   <nav>
+  <% if back_url.nil? %>
+      <div style="width: 35px"></div>
+    <% else %>
+      <%= link_to back_url do %>
+        <i class="fa fa-arrow-left fa-2x"></i>
+      <% end %>
+  <% end %>
   <h1><%= title %></h1>
-  <li class="navs"><a href=<%= groups_path %>>Home</a></li>
   <% if logout %>
     <%= button_to destroy_user_session_path, method: :delete do %>
       <i class="fa fa-sign-out fa-2x"></i>
     <% end %>
   <% end %>
   </nav>
-<% end %>
+</header>
