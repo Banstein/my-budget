@@ -24,6 +24,17 @@ class GroupsController < ApplicationController
     end
   end
 
+  def destroy
+    @user = current_user
+    @group = Group.find(params[:id])
+
+    if @group.destroy
+      redirect_to groups_path, notice: 'Category removed successfully'
+    else
+      render :index, alert: 'Failed to remove category'
+    end
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.

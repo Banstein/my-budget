@@ -7,6 +7,7 @@
         <h2><%= link_to category.name, group_payments_path(group_id: category.id, class: 'text') %></h2>
         <img src="<%= category.icon%>" alt="null">
         <p><%= category.created_at.strftime('%d %B %Y') %></p>
+        <%= button_to "Delete", group_path(id: category.id), method: :delete, class: "btn-del" %>
       </div>
     <% end %>
   </div>
