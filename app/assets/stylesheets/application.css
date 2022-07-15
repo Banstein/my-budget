@@ -76,11 +76,11 @@ nav {
 /* end */
 
 
-.sign-in-form * {
+.sign-form * {
   font-size: 20px;
 }
 
-.sign-in-form {
+.sign-form {
   position: absolute;
   left: 50%;
   top: 10%;
@@ -95,7 +95,7 @@ nav {
   margin-bottom: 20px;
 }
 
-.sign-in-form input {
+.sign-form input {
   outline: none;
   border: 1px gray solid !important;
   border-radius: 5px;
@@ -110,8 +110,15 @@ nav {
   background: var(--main);
   color: white;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .sign-in-links * {
   color: black;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 5px 10px;
 }
