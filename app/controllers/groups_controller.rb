@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: %i[ show update destroy ]
+  before_action :set_group, only: %i[show update destroy]
 
   # GET /groups or /groups.json
   def index
@@ -7,8 +7,7 @@ class GroupsController < ApplicationController
   end
 
   # GET /groups/1 or /groups/1.json
-  def show
-  end
+  def show; end
 
   # GET /groups/new
 
@@ -26,7 +25,7 @@ class GroupsController < ApplicationController
   end
 
   private
-  
+
   # Use callbacks to share common setup or constraints between actions.
   def set_group
     @group = Group.find(params[:id])
