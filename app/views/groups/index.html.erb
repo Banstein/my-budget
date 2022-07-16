@@ -1,0 +1,24 @@
+  <%= render 'layouts/navbar', title: 'Categories', back_url: nil, logout: true %>
+<br/>
+<main>
+  <div class="cat-container">
+    <% @groups.each do |category| %>
+      <div class="cat-card">
+        <img src="<%= category.icon%>" alt="null">
+        <div class="cat-mid">
+          <h2><%= link_to category.name, group_payments_path(group_id: category.id, class: 'text') %></h2>
+          <br>
+          <hr>
+          <br>
+          <p><%= category.created_at.strftime('%d %B %Y') %></p>
+        </div>
+        <div class="cat-right">
+          <h3>$<%= Payment.where(group_id: category.id).reduce(0) { |sum, t| sum + t.amount } %></h3>
+          <%= button_to "Delete", group_path(id: category.id), method: :delete, class: "btn-del" %>
+        </div>
+        
+      </div>
+    <% end %>
+  </div>
+    <%= render 'layouts/footer', title: 'Add a new category', path: new_group_path %>
+</main>
