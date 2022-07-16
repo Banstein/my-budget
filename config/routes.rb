@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  resources :budgets
-  resources :groups
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_for :users
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root 'splash#index'
+  resources :splash, only: [:index]
+
+  resources :groups, only: [:index, :new, :create, :destroy ] do
+    resources :payments, only: %i[index new create destroy update]
+  end
 end

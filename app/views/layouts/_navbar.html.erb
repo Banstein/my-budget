@@ -1,0 +1,23 @@
+<header>
+  <nav>
+  <% if back_url.nil? %>
+      <div style="width: 35px"></div>
+    <% else %>
+      <%= link_to back_url do %>
+        <i class="fa fa-chevron-left fa-2x"></i>
+      <% end %>
+  <% end %>
+  <h1><%= title %></h1>
+  <% if logout %>
+    <%= button_to destroy_user_session_path, method: :delete do %>
+      <i class="fa fa-sign-out fa-3x"></i>
+  <% end %>
+  <% else %>
+    <div style="width: 35px"></div>
+  <% end %>
+  </nav>
+  <div class="alert-wrapper">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+</header>
