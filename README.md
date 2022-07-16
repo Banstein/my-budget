@@ -5,9 +5,9 @@
 ## Diagram
 
 <p style="display: flex; align-items: center; gap: 10px">
-  <img src="img/screen_1.png" width="30%" height="520px" />
-  <img src="img/screen_2.png" width="30%" height="520px" />
-  <img src="img/screen_3.png" width="30%"height="520px" />
+  <img src="img/screen_1.png" width="30%" />
+  <img src="img/screen_2.png" width="30%" />
+  <img src="img/screen_3.png" width="30%" />
 </p>
 
 
