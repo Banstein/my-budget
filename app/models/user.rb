@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :group
   has_many :payment
+
+  validates :name, presence: true, length: { maximum: 100 }
 end
