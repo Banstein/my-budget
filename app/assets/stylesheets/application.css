@@ -106,7 +106,7 @@ nav {
 .sign-form {
   position: absolute;
   left: 50%;
-  top: 10%;
+  top: 12%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
