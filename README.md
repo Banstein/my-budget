@@ -21,7 +21,7 @@
 
 ## Live demo
 
-
+- Check it out on [Heroku](https://my-pretty-budget.herokuapp.com/)
 
 ## Getting Started
 
