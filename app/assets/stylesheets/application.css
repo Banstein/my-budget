@@ -147,7 +147,7 @@ nav {
 
 /* end */
 
-/* form */
+/* add form */
 
 .btn-add {
   min-width: 300px;
@@ -243,11 +243,6 @@ nav {
   height: 70px;
 }
 
-.cat-mid > :first-child,
-.cat-right > :first-child {
-  /* margin-bottom: 10px; */
-}
-
 /* end */
 
 /* payments */
@@ -264,14 +259,15 @@ nav {
 
 .btn-del {
   padding: 10px 20px;
+  background-color: red;
+  color: white;
   border: none;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  color: white;
-  background-color: red;
+  cursor: pointer;
 }
 
 .banner * {
