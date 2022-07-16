@@ -58,7 +58,8 @@ Feel free to check the [issues page](https://github.com/Banstein/my-budget/issue
 ## Show your support
 
 Give a ⭐ if you like this project!
-Special thanks to the designer
+
+Special thanks to the designer [Gregoire Vella](https://www.behance.net/gregoirevella)
 
 ## 📝 License
 
