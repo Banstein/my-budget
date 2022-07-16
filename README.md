@@ -2,7 +2,7 @@
 
 > This is an app build on Ruby on Rails that will help users to save their Spending's list.
 
-## Diagram
+## Screenshots
 
 <p style="display: flex; align-items: center; gap: 10px">
   <img src="img/screen_1.png" width="30%" />
