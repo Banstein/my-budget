@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: %i[show update destroy]
+  before_action :set_user
+  before_action :set_group, only: %i[destroy]
 
   # GET /groups or /groups.json
   def index
@@ -40,6 +41,10 @@ class GroupsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_group
     @group = Group.find(params[:id])
+  end
+
+  def set_user
+    @user = current_user
   end
 
   # Only allow a list of trusted parameters through.

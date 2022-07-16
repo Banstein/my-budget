@@ -1,5 +1,5 @@
 class PaymentsController < ApplicationController
-  before_action :set_payment, only: %i[show update destroy]
+  before_action :set_payment, only: %i[destroy]
 
   # GET /items
   def index
