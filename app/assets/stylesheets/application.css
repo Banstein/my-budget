@@ -223,7 +223,6 @@ nav {
 .cat-card {
   margin-bottom: 20px;
   padding: 10px;
-  border: 1px solid black;
   width: 80%;
   max-width: 600px;
   display: flex;
@@ -233,6 +232,7 @@ nav {
 
 .cat-card img {
   width: 70px;
+  height: 70px;
   margin-right: 5px;
 }
 
@@ -240,8 +240,8 @@ nav {
 .cat-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 70px;
+  justify-content: space-around;
+  height: 100px;
 }
 
 /* end */
@@ -277,28 +277,25 @@ nav {
 
 .banner {
   margin-bottom: 40px;
-  padding: 0 20px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
 }
 
 .banner img {
-  width: 150px;
+  width: 100px;
   margin-right: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .amount {
-  margin: 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 .amount h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* end */
@@ -328,6 +325,21 @@ footer {
   font-weight: 700;
   font-size: 20px;
   white-space: nowrap;
+}
+
+/* end */
+
+/* box shadow */
+
+.banner,
+.trans-card,
+.cat-card {
+  box-shadow: 0 0 8px 2px rgb(0 0 0 / 13%);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 /* end */

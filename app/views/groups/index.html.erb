@@ -7,6 +7,9 @@
         <img src="<%= category.icon%>" alt="null">
         <div class="cat-mid">
           <h2><%= link_to category.name, group_payments_path(group_id: category.id, class: 'text') %></h2>
+          <br>
+          <hr>
+          <br>
           <p><%= category.created_at.strftime('%d %B %Y') %></p>
         </div>
         <div class="cat-right">
