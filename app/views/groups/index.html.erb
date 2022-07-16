@@ -4,10 +4,16 @@
   <div class="cat-container">
     <% @groups.each do |category| %>
       <div class="cat-card">
-        <h2><%= link_to category.name, group_payments_path(group_id: category.id, class: 'text') %></h2>
         <img src="<%= category.icon%>" alt="null">
-        <p><%= category.created_at.strftime('%d %B %Y') %></p>
-        <%= button_to "Delete", group_path(id: category.id), method: :delete, class: "btn-del" %>
+        <div class="cat-mid">
+          <h2><%= link_to category.name, group_payments_path(group_id: category.id, class: 'text') %></h2>
+          <p><%= category.created_at.strftime('%d %B %Y') %></p>
+        </div>
+        <div class="cat-right">
+          <h3>$<%= Payment.where(group_id: category.id).reduce(0) { |sum, t| sum + t.amount } %></h3>
+          <%= button_to "Delete", group_path(id: category.id), method: :delete, class: "btn-del" %>
+        </div>
+        
       </div>
     <% end %>
   </div>

@@ -41,7 +41,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   color: #eee;
-  font-size: 1.4rem;
   background-color: var(--main);
   padding: 20px;
   height: 70px;
@@ -222,13 +221,31 @@ nav {
 .trans-card,
 .cat-card {
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid black;
   width: 80%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cat-card img {
-  width: 100px;
+  width: 70px;
+  margin-right: 5px;
+}
+
+.cat-mid,
+.cat-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.cat-mid > :first-child,
+.cat-right > :first-child {
+  /* margin-bottom: 10px; */
 }
 
 /* end */
@@ -239,6 +256,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.trans-card h2 {
+  min-width: 120px;
 }
 
 .btn-del {
